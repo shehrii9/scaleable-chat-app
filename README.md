@@ -74,4 +74,4 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## 📫 Contact
 
-For questions or feedback, please reach out to [shaharyarahmad393@gmail.com](mailto:shaharyarahmad393@gmail.com).
+For questions or feedback, please contact [shaharyarahmad393@gmail.com](mailto:shaharyarahmad393@gmail.com).
