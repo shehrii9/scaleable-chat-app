@@ -8,6 +8,7 @@ Welcome to the **Chat Application**! This project is a real-time chat applicatio
 - **Offline Support:** Messages are queued and delivered once the recipient is online.
 - **Message Replies:** Reply directly to specific messages.
 - **Message Reactions:** React to messages with emojis.
+- **Network Connectivity Listener:** Monitors and handles network connectivity changes to ensure a seamless messaging experience.
 
 ## 🚀 Getting Started
 
