@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
-
 BuildContext appContext() => navigatorKey.currentContext!;
 
 pushRoute(Widget page) {

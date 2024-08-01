@@ -1,10 +1,11 @@
+import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:emoji_picker_flutter/emoji_picker_flutter.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:frontend/core/constants/constants.dart';
 import 'package:frontend/core/constants/functions.dart';
-import 'package:frontend/core/helper/application_wrapper/cubit/connectivity_cubit.dart';
+import 'package:frontend/core/helper/application_wrapper/network_connectivity_service.dart';
 import 'package:frontend/core/helper/navigation_helper.dart';
 import 'package:frontend/core/utils/theme.dart';
 import 'package:frontend/features/auth/domain/entities/user.dart';
@@ -243,11 +244,13 @@ class _MessageScreenState extends State<MessageScreen> {
           backgroundColor: AppColors.primary,
           shape: const CircleBorder(),
           onPressed: () async {
-            if (context.read<ConnectivityCubit>().state ==
-                ConnectivityStatus.disconnected) {
-              Functions.showSnackBar(context, "Don't have an active internet connection");
+            List<ConnectivityResult> connectivityStatus =
+                NetworkConnectivityService().connectivityStatus;
+            if (!(connectivityStatus.contains(ConnectivityResult.mobile) ||
+                connectivityStatus.contains(ConnectivityResult.wifi))) {
               return;
             }
+
             if (controller.text.isEmpty) {
               return;
             }

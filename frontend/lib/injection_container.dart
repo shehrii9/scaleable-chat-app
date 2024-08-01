@@ -1,7 +1,4 @@
-import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:dio/dio.dart';
-import 'package:frontend/core/helper/application_wrapper/cubit/connectivity_cubit.dart';
-import 'package:frontend/core/helper/navigation_helper.dart';
 import 'package:frontend/core/helper/socket_helper.dart';
 import 'package:frontend/core/utils/db/app_database.dart';
 import 'package:frontend/features/auth/data/datasources/remote/user_datasource.dart';
@@ -59,5 +56,4 @@ Future<void> initializeDependencies() async {
   sl.registerFactory<AuthCubit>(() => AuthCubit(sl(), sl()));
   sl.registerFactory<ContactsCubit>(() => ContactsCubit(sl(), sl(), sl()));
   sl.registerFactory<PasswordToggleCubit>(() => PasswordToggleCubit());
-  sl.registerFactory<ConnectivityCubit>(() => ConnectivityCubit(Connectivity(), navigatorKey));
 }

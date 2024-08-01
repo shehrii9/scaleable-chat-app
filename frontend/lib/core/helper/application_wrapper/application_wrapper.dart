@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'application_handler.dart';
+import 'network_connectivity_service.dart';
 
 class ApplicationWrapper extends StatefulWidget {
   final Widget child;
@@ -17,15 +18,19 @@ class ApplicationWrapper extends StatefulWidget {
 }
 
 class _ApplicationWrapperState extends State<ApplicationWrapper> {
+  final NetworkConnectivityService _networkConnectivityService = NetworkConnectivityService();
+
   @override
   void initState() {
     super.initState();
     WidgetsBinding.instance.addObserver(widget.eventHandler);
+    _networkConnectivityService.initialize();
   }
 
   @override
   void dispose() {
     WidgetsBinding.instance.removeObserver(widget.eventHandler);
+    _networkConnectivityService.dispose();
     super.dispose();
   }
 
