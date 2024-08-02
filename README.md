@@ -66,19 +66,11 @@ Welcome to the **Chat Application**! This project is a real-time chat applicatio
 
 ## 🖼️ Screenshots
 
-### Login Screen
 <p align="center">
-  <img src="https://github.com/shehrii9/scaleable-flutter-nodejs-chat-app/blob/main/frontend/screenshots/Screenshot_20240802-190415.png" alt="Login Screen" width="300">
-</p>
-
-### Home Page
-<p align="center">
-  <img src="https://github.com/shehrii9/scaleable-flutter-nodejs-chat-app/blob/main/frontend/screenshots/Screenshot_20240802-190137.png" alt="Home Page" width="300">
-</p>
-
-### Contacts
-<p align="center">
-  <img src="https://github.com/shehrii9/scaleable-flutter-nodejs-chat-app/blob/main/frontend/screenshots/Screenshot_20240802-190144.png" alt="Contacts" width="300">
+  <img src="https://github.com/shehrii9/scaleable-flutter-nodejs-chat-app/blob/main/frontend/screenshots/Screenshot_20240802-190415.png" alt="Login Screen" width="200">
+  <img src="https://github.com/shehrii9/scaleable-flutter-nodejs-chat-app/blob/main/frontend/screenshots/Screenshot_20240802-190137.png" alt="Home Page" width="200">
+  <img src="https://github.com/shehrii9/scaleable-flutter-nodejs-chat-app/blob/main/frontend/screenshots/Screenshot_20240802-190144.png" alt="Contacts" width="200">
+  <img src="https://github.com/shehrii9/scaleable-flutter-nodejs-chat-app/blob/main/frontend/screenshots/Screenshot_20240802-190131.png" alt="Chat Screen" width="200">
 </p>
 
 ## 🤝 Contributing
