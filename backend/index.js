@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 var bodyParser = require('body-parser');
+var cookieParser = require('cookie-parser');
 const http = require('http');
 const SocketController = require('./src/controllers/socket_controller');
 const { Server } = require('socket.io');
@@ -11,6 +12,7 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+app.use(cookieParser());
 
 const PORT = process.env.PORT || 3000;
 

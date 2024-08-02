@@ -33,6 +33,7 @@ class SocketController {
                         ...JSON.parse(unescapedJsonString),
                         "from": JSON.parse(fromUserData),
                     };
+                    console.log(socketId);
                     if (isConnected) {
                         io.to(socketId).emit('message', data);
                     } else {

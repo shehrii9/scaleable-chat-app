@@ -108,6 +108,9 @@ class MessageBloc extends Bloc<MessageBlocEvent, MessageBlocState> {
 
   void _onMessageSentBloc(
       OnSendMessageEvent event, Emitter<MessageBlocState> emit) async {
+
+    print(event);
+
     var channel = ChannelEntity(
       channelId: event.channel!.channelId,
       userId: event.channel!.userId,

@@ -23,7 +23,6 @@ class SocketHelper {
           jsonDecode(_sharedPreferences.getString(Constants.userRef) ?? ""),
         ).toEntity();
         _socket.emit(Events.update, user.username);
-        // _updateUserUseCase.call(user);
       }
     });
 

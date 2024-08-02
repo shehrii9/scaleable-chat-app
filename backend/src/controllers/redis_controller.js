@@ -73,7 +73,6 @@ const updateUser = async (req, res) => {
 const getUserByUsername = async (req, res) => {
     const user = req.body;
     const { username } = user;
-    const socketId = req.socketId;
 
     client.get(`user:${username}`, (err, userData) => {
         if (err) {
@@ -83,16 +82,7 @@ const getUserByUsername = async (req, res) => {
         }
 
         const user = JSON.parse(userData);
-        client.set(`user:${username}`, JSON.stringify({ ...user, "socketId": socketId }), (err, reply) => {
-            if (err) {
-                console.error('Redis error:', err);
-                res.status(500).json({ error: 'Server error' });
-                return;
-            }
-
-            res.json(user);
-        });
-
+        res.json(user);
     });
 }
 

@@ -1,10 +1,10 @@
 const Redis = require('ioredis');
 
 const config = {
-    host: "",
-    port: 0,
+    host: "redis-17781.c289.us-west-1-2.ec2.redns.redis-cloud.com",
+    port: 17781,
     username: "default",
-    password: "",
+    password: "IUNFqRvqlN9Vy2kh9byR28frAhyCYeCb",
 };
 
 const client = new Redis(config);

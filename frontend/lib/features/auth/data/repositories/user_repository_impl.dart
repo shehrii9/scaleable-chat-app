@@ -5,6 +5,7 @@ import 'package:dartz/dartz.dart';
 import 'package:frontend/core/constants/constants.dart';
 import 'package:frontend/core/errors/exception.dart';
 import 'package:frontend/core/errors/failure.dart';
+import 'package:frontend/core/helper/socket_helper.dart';
 import 'package:frontend/core/utils/db/app_database.dart';
 import 'package:frontend/features/auth/data/datasources/remote/user_datasource.dart';
 import 'package:frontend/features/auth/data/models/user.dart';
@@ -16,8 +17,9 @@ class UserRepositoryImpl extends UserRepository {
   final UserDatasource _userDatasource;
   final AppDatabase _appDatabase;
   final SharedPreferences _sharedPreferences;
+  final SocketHelper _socketHelper;
 
-  UserRepositoryImpl(this._userDatasource, this._appDatabase, this._sharedPreferences);
+  UserRepositoryImpl(this._userDatasource, this._appDatabase, this._sharedPreferences, this._socketHelper);
 
   @override
   Future<List<UserEntity>> getAllUser() async {
@@ -35,6 +37,7 @@ class UserRepositoryImpl extends UserRepository {
     try {
       final result = await _userDatasource.save(UserModel.fromEntity(user));
       await _sharedPreferences.setString(Constants.userRef, jsonEncode(result.toJson()));
+      _socketHelper.emit(Events.update, result.username);
       return Right(result);
     } on ServerException catch(e) {
       return Left(ServerFailure(e.message));

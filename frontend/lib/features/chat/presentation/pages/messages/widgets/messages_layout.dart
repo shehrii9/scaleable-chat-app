@@ -207,13 +207,8 @@ class _MessagesLayoutState extends State<MessagesLayout> {
                               const EdgeInsets.only(top: 10, left: 8, right: 8),
                           padding: const EdgeInsets.only(
                               left: 12, right: 12, top: 6, bottom: 6),
-                          decoration: const BoxDecoration(
-                            borderRadius: BorderRadius.only(
-                              bottomLeft: Radius.circular(18),
-                              bottomRight: Radius.circular(18),
-                              topLeft: Radius.circular(18),
-                              topRight: Radius.circular(8),
-                            ),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(18),
                             color: AppColors.textLight,
                           ),
                           child: Row(
@@ -261,9 +256,8 @@ class _MessagesLayoutState extends State<MessagesLayout> {
                 child: Positioned(
                   bottom: 0,
                   left: 0,
-                  top: 40,
                   child: Text(model.reaction)
-                      .padding(left: 8), // Adjust padding as needed
+                      .padding(left: 8),
                 ),
               ),
             ],
@@ -340,6 +334,9 @@ class _MessagesLayoutState extends State<MessagesLayout> {
                       type: model.type,
                       timestamp: model.timestamp,
                       reaction: reaction,
+                      replyMessage: model.replyMessage,
+                      replyMessageKey: model.replyMessageKey,
+                      isReply: model.isReply,
                     );
                     appContext().read<MessageBloc>().add(OnSendMessageEvent(
                         message: message, channel: widget.channel));
@@ -413,13 +410,8 @@ class _MessagesLayoutState extends State<MessagesLayout> {
                                   top: 10, left: 8, right: 8),
                               padding: const EdgeInsets.only(
                                   left: 12, right: 12, top: 6, bottom: 6),
-                              decoration: const BoxDecoration(
-                                borderRadius: BorderRadius.only(
-                                  bottomLeft: Radius.circular(18),
-                                  bottomRight: Radius.circular(18),
-                                  topLeft: Radius.circular(8),
-                                  topRight: Radius.circular(18),
-                                ),
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(18),
                                 color: AppColors.textLight,
                               ),
                               child: Row(

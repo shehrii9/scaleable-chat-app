@@ -47,7 +47,6 @@ class NetworkConnectivityService {
     try {
       _connectivityStatus = await _connectivity.checkConnectivity();
     } catch (e) {
-      print('Could not initialize connectivity status: $e');
       _connectivityStatus = [ConnectivityResult.none];
     }
   }

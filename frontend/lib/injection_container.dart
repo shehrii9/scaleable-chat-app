@@ -34,7 +34,7 @@ Future<void> initializeDependencies() async {
 
   //repositories
   sl.registerLazySingleton<UserRepository>(
-      () => UserRepositoryImpl(sl(), sl(), sl()));
+      () => UserRepositoryImpl(sl(), sl(), sl(), sl()));
 
   //data sources
   sl.registerLazySingleton<UserDatasource>(() => UserDatasourceImpl(sl()));
