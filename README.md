@@ -64,6 +64,20 @@ Welcome to the **Chat Application**! This project is a real-time chat applicatio
      flutter run apk
      ```
 
+## 🖼️ Screenshots
+
+### Login Screen
+![Login Screen](https://github.com/shehrii9/scaleable-flutter-nodejs-chat-app/blob/main/frontend/screenshots/Screenshot_20240802-190415.png)
+
+### Home Page
+![Home Page](https://github.com/shehrii9/scaleable-flutter-nodejs-chat-app/blob/main/frontend/screenshots/Screenshot_20240802-190137.png)
+
+### Contacts
+![Contacts](https://github.com/shehrii9/scaleable-flutter-nodejs-chat-app/blob/main/frontend/screenshots/Screenshot_20240802-190144.png)
+
+### Chat Screen
+![Chat Screen](https://github.com/shehrii9/scaleable-flutter-nodejs-chat-app/blob/main/frontend/screenshots/Screenshot_20240802-190131.png)
+
 ## 🤝 Contributing
 
 We welcome contributions! To contribute, please submit a pull request or open an issue for suggestions or bug reports.
